@@ -1,10 +1,10 @@
 package base;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public abstract class Student {
     public String fullName;
-    public LocalDate doB;
+    public Date doB;
     public String sex;
     public String phoneNumber;
     public String universityName;
@@ -13,7 +13,7 @@ public abstract class Student {
     public Student() {
     }
 
-    public Student(String fullName, LocalDate doB, String sex, String phoneNumber, String universityName, String gradeLevel) {
+    public Student(String fullName, Date doB, String sex, String phoneNumber, String universityName, String gradeLevel) {
     }
 
     public String getFullName() {
@@ -24,11 +24,11 @@ public abstract class Student {
         this.fullName = fullName;
     }
 
-    public LocalDate getDoB() {
+    public Date getDoB() {
         return doB;
     }
 
-    public void setDoB(LocalDate doB) {
+    public void setDoB(Date doB) {
         this.doB = doB;
     }
 

@@ -1,6 +1,6 @@
 package base;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class NormalStudent extends Student {
     private double englishScore;
@@ -9,10 +9,10 @@ public class NormalStudent extends Student {
     public NormalStudent() {
     }
 
-    public NormalStudent(double englishScore,
+    /*public NormalStudent(double englishScore,
                          double entryTestScore,
                          String fullName,
-                         LocalDate doB,
+                         Date doB,
                          String sex,
                          String phoneNumber,
                          String universityName,
@@ -20,7 +20,7 @@ public class NormalStudent extends Student {
         super(fullName, doB, sex, phoneNumber, universityName, gradeLevel);
         this.englishScore = englishScore;
         this.entryTestScore = entryTestScore;
-    }
+    }*/
 
     public double getEnglishScore() {
         return englishScore;
@@ -40,20 +40,26 @@ public class NormalStudent extends Student {
 
     @Override
     public String showMyInfor() {
-        return String.format("Name: %s" +
-                        "\n\tDoB: %s" +
-                        "\n\tSex: %s" +
-                        "\n\tPhoneNumber: %s" +
-                        "\n\tUniversityName: %s" +
-                        "\n\tGradeLevel: %s",
-                        "\n\tEnglishScore: %d" +
-                        "\n\tEntryTestScore: %d",
-                        fullName, doB, sex, phoneNumber, universityName, gradeLevel, englishScore, entryTestScore);
+        return toString();
     }
 
     @Override
     public String lastName() {
         String[] names = fullName.split(" ");
         return names[names.length-1];
+    }
+
+    @Override
+    public String toString() {
+        return "NormalStudent{" +
+                "englishScore=" + englishScore +
+                ", entryTestScore=" + entryTestScore +
+                ", fullName='" + fullName + '\'' +
+                ", doB=" + doB +
+                ", sex='" + sex + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", universityName='" + universityName + '\'' +
+                ", gradeLevel='" + gradeLevel + '\'' +
+                '}';
     }
 }

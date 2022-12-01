@@ -1,6 +1,6 @@
 import base.GoodStudent;
 import base.NormalStudent;
-import feature.Hire;
+import feature.Recruited;
 import feature.ScannerFactory;
 import feature.UI;
 
@@ -9,15 +9,23 @@ import java.util.Scanner;
 
 public class EntityClass {
     public static void menu(){
-        System.out.println("0. insert good student");
-        System.out.println("1. insert normal student");
-        System.out.println("2. print list hired");
+        System.out.println("0. add good student");
+        System.out.println("1. add normal student");
+        System.out.println("2. print list");
     }
     public static void main(String[] args) throws ParseException {
         try{
             Scanner scanner = ScannerFactory.INSTANCE.getInstance();
             UI uiManager = new UI();
-            Hire hire = new Hire();
+            Recruited recruited = new Recruited();
+            System.out.println("""
+
+                        nhập vào sinh viên giỏi hoặc bình thường với những thuộc tính tương ứng. Tuyển
+                        dụng theo số lượng, nếu số lượng lớn hơn tổng 2 loại sinh viên thì lấy tất cả, nếu số lượng ít hơn\s
+                        tổng thì lấy theo yêu cầu: giỏi trước, bình thường sau, điểm cao trước(với giỏi thì engscore
+                        nếu điểm bằng nhau thì xếp theo tên cuối(a-z), với bình thường thì xếp theo gpa, bằng nhau thì
+                        xếp theo tên cuối)""");
+            System.out.println("---------------------------------------");
 
             while(true){
                 menu();
@@ -36,18 +44,18 @@ public class EntityClass {
                         int numberOfNormalStudents = scanner.nextInt();
                         for(int i = 0; i < numberOfNormalStudents; i++){
                             NormalStudent normalStudent = new NormalStudent();
-                            uiManager.insert(normalStudent, 0);
+                            uiManager.insert(normalStudent, 1);
                         }
                         break;
                     case 2:
-                        System.out.println("number of students to hire: ");
+                        System.out.println("number of students recruited:");
                         int n = scanner.nextInt();
-                        hire.getHiredStudents(n);
+                        recruited.getHiredStudents(n);
                         break;
                 }
             }
         } catch (Exception e){
-            System.out.print("Input have unknown errors");
+            System.out.print("unknown errors :)");
         }
     }
 }

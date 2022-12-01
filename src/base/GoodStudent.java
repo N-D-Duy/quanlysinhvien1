@@ -1,6 +1,5 @@
 package base;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 public class GoodStudent extends Student {
@@ -13,7 +12,7 @@ public class GoodStudent extends Student {
     public GoodStudent(double gpa,
                        String bestRewardName,
                        String fullName,
-                       LocalDate doB,
+                       Date doB,
                        String sex,
                        String phoneNumber,
                        String universityName,
@@ -41,14 +40,17 @@ public class GoodStudent extends Student {
 
     @Override
     public String showMyInfor() {
-        return String.format("Name: %s" +
-                        "\n\tDoB: %s" +
-                        "\n\tSex: %s" +
-                        "\n\tPhoneNumber: %s" +
-                        "\n\tUniversityName: %s" +
-                        "\n\tGradeLevel: %s",
-                        "\n\tgpa: %d" +
-                        "\n\tbestRewardName: %s",
+        return String.format("""
+                        Name: %s
+                        \tDoB: %s
+                        \tSex: %s
+                        \tPhoneNumber: %s
+                        \tUniversityName: %s
+                        \tGradeLevel: %s""",
+                """
+
+                        \tgpa: %d
+                        \tbestRewardName: %s""",
                         fullName, doB, sex, phoneNumber, universityName, gradeLevel, gpa, bestRewardName);
     }
 

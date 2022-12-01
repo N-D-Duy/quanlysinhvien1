@@ -9,11 +9,16 @@ import exceptions.InvalidPhoneNumberException;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 
-public class UI extends Hire{
+public class UI extends Recruited {
+    String fullName;
+    Date dayOfBirth;
+    String sex;
+    String phoneNumber;
+    String universityName;
+    String gradeLevel;
     Scanner scanner = ScannerFactory.INSTANCE.getInstance();
 
 
@@ -36,50 +41,70 @@ public class UI extends Hire{
 
         if(type == 0){
             goodStudents.add((GoodStudent) student);
-        } else normalStudents.add((NormalStudent) student);
+            System.out.println("successful");
+        } else {
+            normalStudents.add((NormalStudent) student);
+            System.out.println("successful");
+        }
 
     }
 
     public GoodStudent getGoodStudent() throws ParseException {
         GoodStudent goodStudent = new GoodStudent();
         System.out.print("name: ");
-        goodStudent.setFullName(scanner.nextLine());
+        fullName = scanner.next();
+        goodStudent.setFullName(fullName);
         System.out.print("day of birth: ");
         //birthdays = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-        goodStudent.setDoB(LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        dayOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.next());
+        goodStudent.setDoB(dayOfBirth);
         System.out.print("sex: ");
-        goodStudent.setSex(scanner.nextLine());
+        sex = scanner.next();
+        goodStudent.setSex(sex);
         System.out.print("phone number: ");
-        goodStudent.setPhoneNumber(scanner.nextLine());
+        phoneNumber = scanner.next();
+        goodStudent.setPhoneNumber(phoneNumber);
         System.out.print("university name: ");
-        goodStudent.setUniversityName(scanner.nextLine());
+        universityName = scanner.next();
+        goodStudent.setUniversityName(universityName);
         System.out.print("grade level: ");
-        goodStudent.setGradeLevel(scanner.nextLine());
+        gradeLevel = scanner.next();
+        goodStudent.setGradeLevel(gradeLevel);
         System.out.print("gpa: ");
-        goodStudent.setGpa(scanner.nextDouble());
+        double gpa = scanner.nextDouble();
+        goodStudent.setGpa(gpa);
         System.out.print("best rewarded name: ");
-        goodStudent.setBestRewardName(scanner.nextLine());
+        String bestRewardName = scanner.next();
+        goodStudent.setBestRewardName(bestRewardName);
         return goodStudent;
     }
 
     public NormalStudent getNormalStudent() throws ParseException {
         NormalStudent normalStudent = new NormalStudent();
         System.out.print("name: ");
-        normalStudent.setFullName(scanner.nextLine());
+        fullName = scanner.next();
+        normalStudent.setFullName(fullName);
         System.out.print("day of birth: ");
-        normalStudent.setDoB(LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        dayOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.next());
+        normalStudent.setDoB(dayOfBirth);
         System.out.print("sex: ");
-        normalStudent.setSex(scanner.nextLine());
+        sex = scanner.next();
+        normalStudent.setSex(sex);
         System.out.print("phone number: ");
-        normalStudent.setPhoneNumber(scanner.nextLine());
+        phoneNumber = scanner.next();
+        normalStudent.setPhoneNumber(phoneNumber);
         System.out.print("university name: ");
-        normalStudent.setUniversityName(scanner.nextLine());
+        universityName = scanner.next();
+        normalStudent.setUniversityName(universityName);
         System.out.print("grade level: ");
-        normalStudent.setGradeLevel(scanner.nextLine());
+        gradeLevel = scanner.next();
+        normalStudent.setGradeLevel(gradeLevel);
         System.out.print("english score: ");
-        normalStudent.setEnglishScore(scanner.nextDouble());
+        double englishScore = scanner.nextDouble();
+        normalStudent.setEnglishScore(englishScore);
         System.out.print("entry test score: ");
-        normalStudent.setEntryTestScore(scanner.nextDouble());
+        double entryTestScore = scanner.nextDouble();
+        normalStudent.setEntryTestScore(entryTestScore);
         return normalStudent;
     }
 
@@ -89,13 +114,4 @@ public class UI extends Hire{
         checkException.nameException(student.fullName);
         checkException.phoneNumberException(student.phoneNumber);
     }
-
-  /*  public void showInformation(Student student){
-        if(student instanceof GoodStudent){
-            ((GoodStudent) student).showMyInfor();
-        }else{
-            ((NormalStudent) student).showMyInfor();
-        }
-    }*/
-
 }

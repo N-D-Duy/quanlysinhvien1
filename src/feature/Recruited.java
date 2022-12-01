@@ -2,14 +2,13 @@ package feature;
 
 import base.GoodStudent;
 import base.NormalStudent;
-import base.Student;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Hire {
+public class Recruited {
 
     public List<GoodStudent> goodStudents = new ArrayList<>();
     public List<NormalStudent> normalStudents = new ArrayList<>();
@@ -26,6 +25,8 @@ public class Hire {
     }
 
     public void getHiredStudents(int numbers){
+        System.out.println(goodStudents.size());
+        System.out.println(normalStudents.size());
         goodStudents = sortGoodStudents();
         normalStudents = sortNormalStudents();
         if(numbers >= goodStudents.size()){
@@ -43,6 +44,4 @@ public class Hire {
             });
         }
     }
-
-
 }
