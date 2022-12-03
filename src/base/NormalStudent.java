@@ -1,7 +1,5 @@
 package base;
 
-import java.util.Date;
-
 public class NormalStudent extends Student {
     private double englishScore;
     private double entryTestScore;
@@ -46,7 +44,7 @@ public class NormalStudent extends Student {
     @Override
     public String lastName() {
         String[] names = fullName.split(" ");
-        return names[names.length-1];
+        return names[names.length - 1];
     }
 
     @Override

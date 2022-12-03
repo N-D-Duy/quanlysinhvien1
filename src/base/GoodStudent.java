@@ -51,13 +51,13 @@ public class GoodStudent extends Student {
 
                         \tgpa: %d
                         \tbestRewardName: %s""",
-                        fullName, doB, sex, phoneNumber, universityName, gradeLevel, gpa, bestRewardName);
+                fullName, doB, sex, phoneNumber, universityName, gradeLevel, gpa, bestRewardName);
     }
 
     @Override
     public String lastName() {
         String[] names = fullName.split(" ");
-        return names[names.length-1];
+        return names[names.length - 1];
     }
 
 }

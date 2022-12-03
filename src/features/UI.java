@@ -1,4 +1,4 @@
-package feature;
+package features;
 
 import base.GoodStudent;
 import base.NormalStudent;
@@ -23,10 +23,10 @@ public class UI extends Recruited {
 
 
     public void insert(Student student, int type) throws ParseException {
-        if(type == 0) student = getGoodStudent();
-        if(type == 1) student = getNormalStudent();
+        if (type == 0) student = getGoodStudent();
+        if (type == 1) student = getNormalStudent();
 
-        try{
+        try {
             checkData(student);
         } catch (InvalidPhoneNumberException e) {
             System.out.println("phone number invalid");
@@ -39,7 +39,7 @@ public class UI extends Recruited {
             insert(student, type);
         }
 
-        if(type == 0){
+        if (type == 0) {
             goodStudents.add((GoodStudent) student);
             System.out.println("successful");
         } else {
@@ -52,7 +52,7 @@ public class UI extends Recruited {
     public GoodStudent getGoodStudent() throws ParseException {
         GoodStudent goodStudent = new GoodStudent();
         System.out.print("name: ");
-        fullName = scanner.next();
+        fullName = scanner.nextLine();
         goodStudent.setFullName(fullName);
         System.out.print("day of birth: ");
         //birthdays = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("dd/MM/yyyy"))
@@ -65,7 +65,7 @@ public class UI extends Recruited {
         phoneNumber = scanner.next();
         goodStudent.setPhoneNumber(phoneNumber);
         System.out.print("university name: ");
-        universityName = scanner.next();
+        universityName = scanner.nextLine();
         goodStudent.setUniversityName(universityName);
         System.out.print("grade level: ");
         gradeLevel = scanner.next();
@@ -74,7 +74,7 @@ public class UI extends Recruited {
         double gpa = scanner.nextDouble();
         goodStudent.setGpa(gpa);
         System.out.print("best rewarded name: ");
-        String bestRewardName = scanner.next();
+        String bestRewardName = scanner.nextLine();
         goodStudent.setBestRewardName(bestRewardName);
         return goodStudent;
     }
@@ -82,7 +82,7 @@ public class UI extends Recruited {
     public NormalStudent getNormalStudent() throws ParseException {
         NormalStudent normalStudent = new NormalStudent();
         System.out.print("name: ");
-        fullName = scanner.next();
+        fullName = scanner.nextLine();
         normalStudent.setFullName(fullName);
         System.out.print("day of birth: ");
         dayOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse(scanner.next());
@@ -94,7 +94,7 @@ public class UI extends Recruited {
         phoneNumber = scanner.next();
         normalStudent.setPhoneNumber(phoneNumber);
         System.out.print("university name: ");
-        universityName = scanner.next();
+        universityName = scanner.nextLine();
         normalStudent.setUniversityName(universityName);
         System.out.print("grade level: ");
         gradeLevel = scanner.next();

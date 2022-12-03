@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c99064-14e4-4c35-afa0-96a43be43efa" name="Changes" comment="quanlysinhvien">
+    <list default="true" id="20c99064-14e4-4c35-afa0-96a43be43efa" name="Changes" comment="quanlysinhvienDemo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EntityClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntityClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/GoodStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/GoodStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/NormalStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/NormalStudent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/CheckException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/CheckException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/Hire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/Recruited.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feature/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/CheckException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/CheckException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/Recruited.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Recruited.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/ScannerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/ScannerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/IdeaProjects/KotlinBasic/src/oopKotlin/bai2&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/IdeaProjects/quanlysinhvien1&quot;
   }
 }</component>
   <component name="RunManager">
@@ -64,7 +65,18 @@
       <option name="presentableId" value="Default" />
       <updated>1660313322136</updated>
       <workItem from="1669902911477" duration="155000" />
+      <workItem from="1670068281037" duration="66000" />
+      <workItem from="1670077250459" duration="441000" />
+      <workItem from="1670078058165" duration="1611000" />
     </task>
+    <task id="LOCAL-00001" summary="quanlysinhvienDemo">
+      <created>1669908311809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669908311809</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +95,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="quanlysinhvien" />
-    <option name="LAST_COMMIT_MESSAGE" value="quanlysinhvien" />
+    <MESSAGE value="quanlysinhvienDemo" />
+    <option name="LAST_COMMIT_MESSAGE" value="quanlysinhvienDemo" />
   </component>
 </project>
